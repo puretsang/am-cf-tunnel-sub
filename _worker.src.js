@@ -571,7 +571,7 @@ function getFakeHostName(host, noTLS) {
     } else if (host.includes(".workers.dev") || host.includes("notls") || noTLS === 'true') {
         return `${fakeHostName}.workers.dev`;
     }
-    return `${fakeHostName}.xyz`;
+    return `${fakeHostName}`;
 }
 
 function isValidBase64(str) {
