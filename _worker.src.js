@@ -28,7 +28,8 @@ let noTLS = false;
 let sl = 5;
 
 let fakeUserId;
-let fakeHostName = 'amclubs';
+let fakeHostName ;
+// let fakeHostNickname = 'amclubs'
 
 let isBase64 = true;
 let subConfig = base64Decode('aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2FtY2x1YnMvQUNMNFNTUi9tYWluL0NsYXNoL2NvbmZpZy9BQ0w0U1NSX09ubGluZV9GdWxsX011bHRpTW9kZS5pbmk=');
@@ -571,7 +572,7 @@ function getFakeHostName(host, noTLS) {
     } else if (host.includes(".workers.dev") || host.includes("notls") || noTLS === 'true') {
         return `${fakeHostName}.workers.dev`;
     }
-    return `${fakeHostName}.xyz`;
+    return `${"amclubs"}.xyz`;
 }
 
 function isValidBase64(str) {
