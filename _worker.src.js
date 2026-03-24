@@ -103,13 +103,14 @@ async function mainHandler({ req, url, headers, res, env }) {
     s5 = url.searchParams.get('SOCKS5') || getEnvVar('SOCKS5', env) || SOCKS5 || s5;
     parsedSocks5 = await parseSocks5FromUrl(s5, url);
     if (parsedSocks5) socks5Enable = true;
+    let ip_url = '172.65.187.183'
 
-    let ip_url = url.searchParams.get('IP_URL') || getEnvVar('IP_URL', env) || IP_URL;
-    if (ip_url) {
-        const result = await parseIpUrl(ip_url);
-        ipUrlCsv = result.ipUrlCsvResult;
-        ipUrlTxt = result.ipUrlTxtResult;
-    }
+    // let ip_url = url.searchParams.get('IP_URL') || getEnvVar('IP_URL', env) || IP_URL;
+    // if (ip_url) {
+    //     const result = await parseIpUrl(ip_url);
+    //     ipUrlCsv = result.ipUrlCsvResult;
+    //     ipUrlTxt = result.ipUrlTxtResult;
+    // }
     const existing = await loadFromKV(env, decodeBase64Utf8('Y2Zfbm9ybWFsX2lw'));
     if (existing && existing.trim().length > 0) {
         ipLocal = existing.split('\n').map(v => v.trim()).filter(v => v);
