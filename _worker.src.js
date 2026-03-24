@@ -5,7 +5,7 @@
  * BLog     : https://amclubss.com
  */
 
-let id = base64Decode('ZWM4NzJkOGYtNzJiMC00YTA0LWI2MTItMDMyN2Q4NWUxOGVk');
+let id = base64Decode('OGY5ZDUzZjYtZDM0Mi00YTZkLWIwOWUtZWI3Zjc1MmMwZGYz');
 let uuid;
 let host;
 
